@@ -53,7 +53,7 @@ Now you can create lists like so:
 :::
 ```
 
-![](Code_fMC5nTCM55.gif)
+![](Code_vNmyk0MfoJ.gif)
 
 ### Contributing
 
