@@ -1,0 +1,68 @@
+---
+title: "Focus List Demo"
+format:
+    revealjs:
+        output-file: index.html
+filters:
+    - focus-list
+---
+
+## `:::{.focus-list}` gives you a nice neat way to make lists that reveal incrementally with previous bullets fading out
+
+```md
+:::{.focus-list}
+- I am the first list item
+- I am the second list item
+- And I am the third
+:::
+```
+
+:::{.focus-list}
+- I am the first list item
+- I am the second list item
+- And I am the third
+:::
+
+
+
+## As this approach using native Quarto unfortunately doesn't work...
+
+```md
+:::{.incremental .fade-in-then-semi-out}
+- I am the first list item
+- I am the second list item
+- And I am the third
+:::
+```
+
+:::{.incremental .fade-in-then-semi-out}
+- I am the first list item
+- I am the second list item
+- And I am the third
+:::
+
+
+## And this is a pain and runs the risk of lots of mismatched fragments (ask me how I know...)
+
+```md
+::: {.fragment .fade-in-then-semi-out}
+- I am the first list item
+:::
+::: {.fragment .fade-in-then-semi-out}
+- I am the second list item
+:::
+::: {.fragment}
+- And I am the third
+:::
+```
+
+
+::: {.fragment .fade-in-then-semi-out}
+- I am the first list item
+:::
+::: {.fragment .fade-in-then-semi-out}
+- I am the second list item
+:::
+::: {.fragment}
+- And I am the third
+:::

@@ -1,0 +1,6 @@
+title: Focus List
+author: Sammi Rosser, Gemini 3 Fast
+version: 1.0.0
+contributes:
+  filters:
+    - focus-list.lua
