@@ -44,7 +44,7 @@ filters:
 > if you have another filter extension with the same name!
 
 
-Now you can create value boxes like so:
+Now you can create lists like so:
 
 ```md
 ::: {.focus-list}
@@ -53,7 +53,7 @@ Now you can create value boxes like so:
 :::
 ```
 
-![](assets/2026-05-27-13-01-53.png)
+![](Code_fMC5nTCM55.gif)
 
 ### Contributing
 
