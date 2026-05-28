@@ -55,7 +55,12 @@ Now you can create lists like so:
 
 ![](Code_vNmyk0MfoJ.gif)
 
-### Contributing
+## Thanks
+
+I'm pretty sure this solution was heavily inspired by this conversation here: https://github.com/orgs/quarto-dev/discussions/4626
+
+
+## Contributing
 
 Please take a look at our [contributor guidance](CONTRIBUTING) and [code of conduct](CODE_OF_CONDUCT)
 
