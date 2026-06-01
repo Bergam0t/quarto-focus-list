@@ -1,0 +1,38 @@
+/* Reset list to be stable */
+.reveal .focus-list ul,
+.reveal .focus-list ol {
+  list-style-type: none !important;
+  padding-left: 1em !important;
+  position: relative;
+}
+
+/* The Fragment Container */
+.reveal .focus-list .fragment {
+  display: block;
+  width: 100%;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+/* The Bullet */
+.reveal .focus-list .fragment::before {
+  content: "•";
+  position: absolute;
+  left: -0.8em;
+  color: inherit;
+}
+
+/* Hide before appearing - transparent instead of fighting opacity */
+.reveal .focus-list .fragment:not(.visible) {
+  color: transparent !important;
+}
+
+/* Current item */
+.reveal .focus-list .fragment.current-fragment {
+  color: inherit !important; /* pulls from the slide/theme naturally */
+}
+
+/* Past items: dimmed */
+.reveal .focus-list .fragment.visible:not(.current-fragment) {
+  color: color-mix(in srgb, currentColor 35%, transparent) !important;
+}

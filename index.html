@@ -6,7 +6,8 @@
 <script src="example_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="example_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="example_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="example_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="example_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="example_files/libs/quarto-contrib/focus-list-styles-1.0.0/focus-list.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
   <title>Focus List Demo</title>
@@ -210,13 +211,29 @@
 <span id="cb1-5"><a href=""></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="focus-list">
 <ul>
-<li><div class="fragment fade-in-then-semi-out">
+<li><div class="fragment">
 I am the first list item
 </div></li>
-<li><div class="fragment fade-in-then-semi-out">
+<li><div class="fragment">
 I am the second list item
 </div></li>
-<li><div class="fragment fade-in-then-semi-out">
+<li><div class="fragment">
+And I am the third
+</div></li>
+</ul>
+</div>
+</section>
+<section id="and-it-works-on-dark-backgrounds-too" class="slide level2" data-background-color="#000000">
+<h2>And it works on dark backgrounds too</h2>
+<div class="focus-list">
+<ul>
+<li><div class="fragment">
+I am the first list item
+</div></li>
+<li><div class="fragment">
+I am the second list item
+</div></li>
+<li><div class="fragment">
 And I am the third
 </div></li>
 </ul>
@@ -446,9 +463,9 @@ And I am the third
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1250,
 
-        height: 700,
+        height: 800,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,

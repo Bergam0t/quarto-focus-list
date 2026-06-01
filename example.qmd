@@ -3,6 +3,8 @@ title: "Focus List Demo"
 format:
     revealjs:
         output-file: index.html
+        height: 800 # default height and width ensure consistent behaviour on different screens
+        width: 1250
 filters:
     - focus-list
 ---
@@ -24,6 +26,13 @@ filters:
 :::
 
 
+## And it works on dark backgrounds too {background-color="#000000"}
+
+:::{.focus-list}
+- I am the first list item
+- I am the second list item
+- And I am the third
+:::
 
 ## As this approach using native Quarto unfortunately doesn't work...
 
