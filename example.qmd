@@ -34,7 +34,67 @@ filters:
 - And I am the third
 :::
 
-## As this approach using native Quarto unfortunately doesn't work...
+## And with nested lists
+
+:::{.focus-list}
+- I am the first list item
+    - I am a subpoint of the first list item
+        - I am a subpoint of a subpoint
+- I am the second list item
+- And I am the third
+:::
+
+
+## Add `.dim-parents` if you'd rather the parent faded out as well
+
+```md
+:::{.focus-list .dim-parents}
+- I am the first list item
+    - I am a subpoint of the first list item
+:::
+```
+
+:::{.focus-list .dim-parents}
+- I am the first list item
+    - I am a subpoint of the first list item
+        - I am a subpoint of a subpoint
+- I am the second list item
+- And I am the third
+:::
+
+## Nested lists work on dark backgrounds too {background-color="#000000"}
+
+:::: {.columns}
+
+::: {.column width='50%'}
+#### Standard .focus-list
+:::{.focus-list}
+- I am the first list item
+    - I am a subpoint of the first list item
+        - I am a subpoint of a subpoint
+- I am the second list item
+- And I am the third
+:::
+:::
+
+::: {.column width='50%'}
+#### With .dim-parents
+:::{.focus-list .dim-parents}
+- I am the first list item
+    - I am a subpoint of the first list item
+        - I am a subpoint of a subpoint
+- I am the second list item
+- And I am the third
+:::
+:::
+
+::::
+
+
+
+# Why does this extension exist?
+
+## Because this approach using native Quarto unfortunately doesn't work...
 
 ```md
 :::{.incremental .fade-in-then-semi-out}

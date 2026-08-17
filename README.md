@@ -55,6 +55,50 @@ Now you can create lists like so:
 
 ![](Code_KGpKuUYK8p.gif)
 
+### Nested lists
+
+Nested lists work to any depth, and every level fades to the same amount - a subpoint is just as
+readable as a top-level point when it's the one you're on.
+
+```md
+::: {.focus-list}
+- This is the first item
+    - And this is a subpoint of it
+        - Which can have subpoints of its own
+- This is the second item
+:::
+```
+
+By default, a point stays lit while any of its subpoints are being revealed, so your audience
+keeps the heading the subpoints belong to.
+
+### Options
+
+If you'd rather the parent point faded out as soon as you move on to its subpoints - so only ever
+one point is lit - add the `dim-parents` class:
+
+```md
+::: {.focus-list .dim-parents}
+- This is the first item
+    - And this is a subpoint of it
+:::
+```
+
+Or set it once for the whole document in your header:
+
+```yml
+---
+filters:
+  - focus-list
+focus-list:
+  dim-parents: true
+---
+```
+
+> [!NOTE]
+> Keeping the parent lit uses the CSS `:has()` selector, which needs Chrome 105+, Safari 15.4+ or
+> Firefox 121+. In older browsers you'll get the `dim-parents` behaviour instead.
+
 ## Thanks
 
 I'm pretty sure this solution was heavily inspired by this conversation here: https://github.com/orgs/quarto-dev/discussions/4626

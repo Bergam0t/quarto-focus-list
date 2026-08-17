@@ -22,6 +22,15 @@
   color: inherit;
 }
 
+/* Nested levels get the conventional markers */
+.reveal .focus-list ul ul .fragment::before {
+  content: "◦";
+}
+
+.reveal .focus-list ul ul ul .fragment::before {
+  content: "▪";
+}
+
 /* Hide before appearing - transparent instead of fighting opacity */
 .reveal .focus-list .fragment:not(.visible) {
   color: transparent !important;
@@ -35,4 +44,10 @@
 /* Past items: dimmed */
 .reveal .focus-list .fragment.visible:not(.current-fragment) {
   color: color-mix(in srgb, currentColor 35%, transparent) !important;
+}
+
+/* An item stays lit while one of its subpoints is current, so the sub-list
+   keeps its heading. Add .dim-parents to the div to opt out of this. */
+.reveal .focus-list:not(.dim-parents) li:has(li .fragment.current-fragment) > .fragment.visible {
+  color: inherit !important;
 }
